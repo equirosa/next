@@ -20,9 +20,9 @@ int main(int argc, char **argv)
 
  QObject obj;
  Interface *interface = new Interface(&obj);
- QDBusConnection::sessionBus().registerObject("/engineer/atlas/next/core", &obj);
+ QDBusConnection::sessionBus().registerObject("/engineer/atlas/next/platform", &obj);
 
- if (!QDBusConnection::sessionBus().registerService("engineer.atlas.next.core")) {
+ if (!QDBusConnection::sessionBus().registerService("engineer.atlas.next.platform")) {
      fprintf(stderr, "%s\n",
              qPrintable(QDBusConnection::sessionBus().lastError().message()));
      exit(1);
